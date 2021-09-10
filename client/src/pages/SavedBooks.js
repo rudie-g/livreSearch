@@ -11,7 +11,7 @@ const SavedBooks = () => {
   
   const {loading, data} = useQuery(GET_ME)
   
-  let userData = data?.me || {}
+  let userData = data?.getThisUser || {}
 
   const [deleteBookApollo, {error}] = useMutation(REMOVE_BOOK)
 
